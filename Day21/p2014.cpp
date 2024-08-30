@@ -6,12 +6,12 @@ struct Lesson
     int credit;
 
     vector<int> son_lessons;
-    Lesson()
-    {
-        credit = 0;
-        son_lessons = vector<int>();
+    // Lesson()
+    // {
+    //     credit = 0;
+    //     son_lessons = vector<int>();
 
-    }
+    // }
 };
 
 Lesson lessons[MAXN];
