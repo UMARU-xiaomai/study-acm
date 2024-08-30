@@ -6,6 +6,12 @@ struct Lesson
     int credit;
 
     vector<int> son_lessons;
+    Lesson()
+    {
+        credit = 0;
+        son_lessons = vector<int>();
+
+    }
 };
 
 Lesson lessons[MAXN];
@@ -26,7 +32,7 @@ void dfs(int root)
             cout<<"son:"<<i<<endl;
             dfs(i);
             for(int a= 2;a<=m;a++)
-                for(int k = 1;k<a;k++)
+                for(int k = 1;k<=a;k++)
                     dp[root][a] = max(dp[root][a],dp[root][a-k] + dp[i][k]);
                 
         }
